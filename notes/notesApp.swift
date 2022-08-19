@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct experiment_wiht_offsetApp: App {
+struct notesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LevelView()
         }
     }
 }
