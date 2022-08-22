@@ -19,6 +19,7 @@
 		CFB37B31287577780004087A /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB37B30287577780004087A /* NoteView.swift */; };
 		CFEF501228B3F00D00CC03C4 /* levels.json in Resources */ = {isa = PBXBuildFile; fileRef = CFEF501128B3F00D00CC03C4 /* levels.json */; };
 		CFEF501428B3F13B00CC03C4 /* Levels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEF501328B3F13B00CC03C4 /* Levels.swift */; };
+		CFEF501628B3F34B00CC03C4 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEF501528B3F34B00CC03C4 /* BundleExtensions.swift */; };
 		CFF8D306286F857900B04330 /* notesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF8D305286F857900B04330 /* notesApp.swift */; };
 		CFF8D308286F857900B04330 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF8D307286F857900B04330 /* GameView.swift */; };
 		CFF8D30A286F857A00B04330 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF8D309286F857A00B04330 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 		CFB37B30287577780004087A /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		CFEF501128B3F00D00CC03C4 /* levels.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = levels.json; sourceTree = "<group>"; };
 		CFEF501328B3F13B00CC03C4 /* Levels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Levels.swift; sourceTree = "<group>"; };
+		CFEF501528B3F34B00CC03C4 /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
 		CFF8D302286F857900B04330 /* experiment wiht offset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "experiment wiht offset.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF8D305286F857900B04330 /* notesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notesApp.swift; sourceTree = "<group>"; };
 		CFF8D307286F857900B04330 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				CF92F0D228984F6D004937F7 /* PitchesDictionary.swift */,
 				CF591CEB28AFF93400AD006E /* Parameters.swift */,
 				CF2193E528988B6300F36410 /* StringExtensions.swift */,
+				CFEF501528B3F34B00CC03C4 /* BundleExtensions.swift */,
 				CFEF501128B3F00D00CC03C4 /* levels.json */,
 				CFEF501328B3F13B00CC03C4 /* Levels.swift */,
 				CF11C0D028AD62A90059F5E2 /* todo.txt */,
@@ -180,6 +183,7 @@
 				CF7878B42896CAD200730BB4 /* ImageRenderView.swift in Sources */,
 				CF2193E628988B6300F36410 /* StringExtensions.swift in Sources */,
 				CFF8D308286F857900B04330 /* GameView.swift in Sources */,
+				CFEF501628B3F34B00CC03C4 /* BundleExtensions.swift in Sources */,
 				CF7878B22896C85C00730BB4 /* StaveLineView.swift in Sources */,
 				CFEF501428B3F13B00CC03C4 /* Levels.swift in Sources */,
 				CFB37B31287577780004087A /* NoteView.swift in Sources */,

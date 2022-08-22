@@ -13,7 +13,8 @@ struct Levels: Decodable {
 
 }
 
-struct Difficulty: Decodable {
-
-    var durations: [Duration]
-}
+//struct Difficulty: Decodable {
+//
+////    var durations: [Duration]
+//    var durations: [String]
+//}

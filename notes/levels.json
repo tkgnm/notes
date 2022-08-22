@@ -1,11 +1,3 @@
 {
-    "difficulty": {
-        "easy": {
-            "durations": [crotchet]
-
-        },
-        "hard": {
-            "durations": [quaver, crotchet, minim, semibreve]
-        }
-    }
+    "difficulty": "Hello"
 }
