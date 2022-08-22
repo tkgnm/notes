@@ -18,9 +18,3 @@ struct Levels: Decodable, Identifiable {
 struct Settings: Decodable {
     var durations: [Duration]
 }
-
-//struct Difficulty: Decodable {
-//
-////    var durations: [Duration]
-//    var durations: [String]
-//}

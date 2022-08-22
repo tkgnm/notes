@@ -9,7 +9,6 @@ import SwiftUI
 
 struct LevelView: View {
 
-//    var levels = ["Easy", "Hard"]
     @State private var isShowingGameView = false
 
     let levels: [Levels] = Bundle.main.decode("levels.json")

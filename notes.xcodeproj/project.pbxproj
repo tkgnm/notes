@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CF11C0D128AD62A90059F5E2 /* todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = CF11C0D028AD62A90059F5E2 /* todo.txt */; };
 		CF2193E628988B6300F36410 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2193E528988B6300F36410 /* StringExtensions.swift */; };
-		CF591CEC28AFF93400AD006E /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF591CEB28AFF93400AD006E /* Parameters.swift */; };
 		CF7878B22896C85C00730BB4 /* StaveLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7878B12896C85C00730BB4 /* StaveLineView.swift */; };
 		CF7878B42896CAD200730BB4 /* ImageRenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7878B32896CAD200730BB4 /* ImageRenderView.swift */; };
 		CF92F0CF28983E5F004937F7 /* StaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF92F0CE28983E5F004937F7 /* StaveView.swift */; };
@@ -29,7 +28,6 @@
 /* Begin PBXFileReference section */
 		CF11C0D028AD62A90059F5E2 /* todo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = todo.txt; sourceTree = "<group>"; };
 		CF2193E528988B6300F36410 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
-		CF591CEB28AFF93400AD006E /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
 		CF7878B12896C85C00730BB4 /* StaveLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaveLineView.swift; sourceTree = "<group>"; };
 		CF7878B32896CAD200730BB4 /* ImageRenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRenderView.swift; sourceTree = "<group>"; };
 		CF92F0CE28983E5F004937F7 /* StaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaveView.swift; sourceTree = "<group>"; };
@@ -86,11 +84,10 @@
 				CF7878B32896CAD200730BB4 /* ImageRenderView.swift */,
 				CF92F0D028984087004937F7 /* Duration.swift */,
 				CF92F0D228984F6D004937F7 /* PitchesDictionary.swift */,
-				CF591CEB28AFF93400AD006E /* Parameters.swift */,
 				CF2193E528988B6300F36410 /* StringExtensions.swift */,
 				CFEF501528B3F34B00CC03C4 /* BundleExtensions.swift */,
-				CFEF501128B3F00D00CC03C4 /* levels.json */,
 				CFEF501328B3F13B00CC03C4 /* Levels.swift */,
+				CFEF501128B3F00D00CC03C4 /* levels.json */,
 				CF11C0D028AD62A90059F5E2 /* todo.txt */,
 				CFF8D309286F857A00B04330 /* Assets.xcassets */,
 				CFF8D30B286F857A00B04330 /* Preview Content */,
@@ -190,7 +187,6 @@
 				CF92F0D128984087004937F7 /* Duration.swift in Sources */,
 				CFF8D306286F857900B04330 /* notesApp.swift in Sources */,
 				CF93456128ABF907000DF9C8 /* LevelView.swift in Sources */,
-				CF591CEC28AFF93400AD006E /* Parameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
