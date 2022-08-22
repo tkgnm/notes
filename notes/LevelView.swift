@@ -12,7 +12,7 @@ struct LevelView: View {
 //    var levels = ["Easy", "Hard"]
     @State private var isShowingGameView = false
 
-    let levels: [String: Levels] = Bundle.main.decode("levels.json")
+    let levels: [Levels] = Bundle.main.decode("levels.json")
 
     var body: some View {
         NavigationView {
