@@ -9,8 +9,13 @@ import Foundation
 
 struct Levels: Decodable {
 
-    var parameters: String
+    var name: String
+    var settings: Settings
 
+}
+
+struct Settings: Decodable {
+    var durations: [Duration]
 }
 
 //struct Difficulty: Decodable {

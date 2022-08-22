@@ -1,5 +1,8 @@
 {
-    "parameters": {
-        "parameters": "parameter"
+    "levels": {
+        "name": "myName",
+        "settings": {
+            "durations": ["crotchet"]
+        }
     }
 }
