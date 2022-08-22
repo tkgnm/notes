@@ -9,7 +9,7 @@ import Foundation
 
 struct Levels: Decodable {
 
-    var difficulty: String
+    var parameters: String
 
 }
 
