@@ -17,18 +17,15 @@ struct LevelView: View {
     var body: some View {
         NavigationView {
             HStack {
-                NavigationLink(destination: GameView()) {
-                    Circle()
-                        .foregroundColor(.blue)
-                        .overlay(Text("Easy"))
-                        .foregroundColor(.white)
-                }
-
-                NavigationLink(destination: GameView()) {
-                    Circle()
-                        .foregroundColor(.blue)
-                        .overlay(Text("Hard"))
-                        .foregroundColor(.white)
+                ForEach(levels) { level in
+                    NavigationLink {
+                        GameView(durations: level.settings.durations)
+                    } label: {
+                        Circle()
+                            .foregroundColor(.blue)
+                            .overlay(Text("\(level.name)"))
+                            .foregroundColor(.white)
+                    }
                 }
             }
             .padding(20)

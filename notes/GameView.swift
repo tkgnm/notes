@@ -20,6 +20,7 @@ struct GameView: View {
 //    }
 
     var parameters = Parameters(difficulty: .hard)
+    let durations: [Duration]
 
     @State private var pitches: [Pitch] = [.D4, .E4, .F4, .G4, .A4, .B4, .C5, .D5, .E5, .F5, .G5, .A5].shuffled()
 
@@ -40,7 +41,7 @@ struct GameView: View {
                 Spacer()
                 ZStack {
                     VStack {
-                        StaveView(noteValue: parameters.durations[0], pitches: [pitches[0]])
+                        StaveView(noteValue: durations[0], pitches: [pitches[0]])
                     }
                 }
 
@@ -113,7 +114,7 @@ struct GameView: View {
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView()
+        GameView(durations: [.crotchet])
             .previewDevice("iPhone 8")
     }
 }

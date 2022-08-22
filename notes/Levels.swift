@@ -7,8 +7,9 @@
 
 import Foundation
 
-struct Levels: Decodable {
+struct Levels: Decodable, Identifiable {
 
+    var id: Int
     var name: String
     var settings: Settings
 

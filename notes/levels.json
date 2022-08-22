@@ -1,13 +1,15 @@
 [
     {
+        "id": 1,
         "name": "Easy",
         "settings": {
             "durations": ["crotchet"]
 
         }
     },
-    
+
     {
+        "id": 2,
         "name": "Hard",
         "settings": {
             "durations": ["quaver", "crotchet", "minim", "semibreve"]
