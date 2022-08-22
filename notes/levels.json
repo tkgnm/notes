@@ -1,8 +1,15 @@
 {
-    "levels": {
-        "name": "myName",
+    "easy": {
+        "name": "Easy",
         "settings": {
             "durations": ["crotchet"]
+        }
+    },
+
+    "hard": {
+        "name": "Hard",
+        "settings": {
+            "durations": ["quaver", "crotchet", "minim", "semibreve"]
         }
     }
 }
