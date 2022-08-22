@@ -10,7 +10,7 @@ import SwiftUI
 
 struct NoteView: View {
     
-    var value: NoteValue
+    var value: Duration
     var pitch: Pitch
     var pitchOffset: CGFloat {
         return pitches[pitch] ?? 0

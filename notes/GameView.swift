@@ -11,7 +11,15 @@ struct GameView: View {
 
     @Environment(\.dismiss) var dismiss
 
-    @State private var noteValues: [NoteValue] = [.quaver, .crotchet, .minim, .semibreve]
+//    var parameters: Parameters {
+//        if difficulty == .easy {
+//            return Parameters(difficulty: .easy)
+//        } else {
+//            return Parameters(difficulty: .hard)
+//        }
+//    }
+
+    var parameters = Parameters(difficulty: .hard)
 
     @State private var pitches: [Pitch] = [.D4, .E4, .F4, .G4, .A4, .B4, .C5, .D5, .E5, .F5, .G5, .A5].shuffled()
 
@@ -32,7 +40,7 @@ struct GameView: View {
                 Spacer()
                 ZStack {
                     VStack {
-                        StaveView(noteValue: noteValues[0], pitches: [pitches[0]])
+                        StaveView(noteValue: parameters.durations[0], pitches: [pitches[0]])
                     }
                 }
 
@@ -87,7 +95,8 @@ struct GameView: View {
         }
         totalQuestions += 1
         pitches.shuffle()
-        noteValues.shuffle()
+//        noteValues.shuffle()
+        parameters.shuffleNotes()
 //        value = noteValues.randomElement() ?? .crotchet
         correctAnswer = Int.random(in: 0...6)
     }

@@ -7,28 +7,29 @@
 
 import Foundation
 
-enum Difficulty {
+enum Difficulty_2 {
     case easy, hard
 }
 
 class Parameters: ObservableObject {
 
-    @Published var noteValues: [NoteValue]
+    @Published var durations: [Duration]
 
-    init(difficulty: Difficulty) {
+
+    init(difficulty: Difficulty_2) {
 
         switch difficulty {
             case .easy:
-                noteValues = [.crotchet]
+                durations = [.crotchet]
 
             case .hard:
-                noteValues = [.quaver, .crotchet, .minim, .semibreve]
+                durations = [.quaver, .crotchet, .minim, .semibreve]
         }
 
     }
-
+    
     func shuffleNotes() {
-        noteValues.shuffle()
+        durations.shuffle()
     }
 
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StaveView: View {
     
-    var noteValue: NoteValue
+    var noteValue: Duration
     var pitches: [Pitch]
     var padding: CGFloat = 4
     
