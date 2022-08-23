@@ -1,19 +1,19 @@
-1) get it to tell the user when they've answered something incorrectly
+x 1) get it to tell the user when they've answered something incorrectly
 
     https://www.hackingwithswift.com/books/ios-swiftui/creating-explicit-animations
 
+x 2) get the easy/hard buttons to do different configurations
 
-2) get the easy/hard buttons to do different configurations
 3) implement a 'custom' level that lets users choose the parameteres
 4) get it to work with different clefs
-5) get it to work in dark mode
+x 5) get it to work in dark mode
 6) last 5 seconds play a little sound to countdown
 7) review screen that shows two notes overlayed, one is red that is incorrect, one is green that is the correct answer, and you can swipe between mistakes. it shouldnt show you all mistakes, just your top 3 mistakes. with perahps some stats like 'you got this one wrong x times''
 8) it can then ask you to play again, and double the probability of you seeing those ones
 9) then, on the level select screen it can show some stats like (90% nailed)
-10) over time, it can recomend you review after a certain amount of time - once youve reviewed and still have it nailed, it will mark it as 'mastered'
+10) over time, it can recomend you review after a certain amount of time - once youve reviewed and still have it nailed, it will mark it as 'mastered'. You can use notification centre for this.
 11) A 'your activity' screen showing how much time spent practicing over certain days that uses swift charts
 12) implement a 'learn' tab, and a 'progress' tab. Learn actually teaches, whereas progress lets you progress. You don't have to do the learning, you can just progress if you want. actually, maybe screw tabs and just put it all on one screen. a learn vs progress button? maybe put some time in to think about how you would do thsi in a UI friendly way
 13) also, all the LEARN pages could be something like web views? thebn you aint gotta make em for both ios, android and the web.
 14) teachers can verify that students have not made two accounts by checking device ID - that'll stop them from doing it for a mate!
-15
+

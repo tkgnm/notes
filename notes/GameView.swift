@@ -11,7 +11,7 @@ struct GameView: View {
 
     @Environment(\.dismiss) var dismiss
 
-    let durations: [Duration]
+    @State var durations: [Duration]
 
     @State private var pitches: [Pitch] = [.D4, .E4, .F4, .G4, .A4, .B4, .C5, .D5, .E5, .F5, .G5, .A5].shuffled()
 
@@ -87,7 +87,7 @@ struct GameView: View {
         }
         totalQuestions += 1
         pitches.shuffle()
-//        noteValues.shuffle()
+        durations.shuffle()
 //        parameters.shuffleNotes()
 //        value = noteValues.randomElement() ?? .crotchet
         correctAnswer = Int.random(in: 0...6)
