@@ -17,4 +17,6 @@ struct Levels: Decodable, Identifiable {
 
 struct Settings: Decodable {
     var durations: [Duration]
+    var pitches: [Pitch]
+    var answers: [String]
 }

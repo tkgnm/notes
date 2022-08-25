@@ -12,10 +12,9 @@ struct GameView: View {
     @Environment(\.dismiss) var dismiss
 
     @State var durations: [Duration]
+    @State var pitches: [Pitch]
+    @State  var answers: [String]
 
-    @State private var pitches: [Pitch] = [.D4, .E4, .F4, .G4, .A4, .B4, .C5, .D5, .E5, .F5, .G5, .A5].shuffled()
-
-    @State private var answers = ["C", "D", "E", "F", "G", "A", "B"]
     @State private var correctAnswer = Int.random(in: 0..<7)
     @State private var score = 0
     @State private var ticker = 10
@@ -32,7 +31,7 @@ struct GameView: View {
                 Spacer()
                 ZStack {
                     VStack {
-                        StaveView(noteValue: durations[0], pitches: [pitches[0]])
+                        Stave(noteValue: durations[0], pitches: [pitches[0]])
                     }
                 }
 
@@ -105,7 +104,7 @@ struct GameView: View {
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView(durations: [.crotchet])
+        GameView(durations: [.crotchet], pitches: [.C5, .D5], answers: ["C", "D", "E", "F", "G", "A", "B"])
             .previewDevice("iPhone 8")
     }
 }

@@ -18,7 +18,8 @@ struct LevelView: View {
             HStack {
                 ForEach(levels) { level in
                     NavigationLink {
-                        GameView(durations: level.settings.durations)
+                        GameView(durations: level.settings.durations,
+                                 pitches: level.settings.pitches, answers: level.settings.answers)
                     } label: {
                         Circle()
                             .foregroundColor(.blue)

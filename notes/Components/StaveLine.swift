@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StaveLineView: View {
+struct StaveLine: View {
     
     let width: CGFloat = 300
     var padding: CGFloat = 4
@@ -22,6 +22,6 @@ struct StaveLineView: View {
 
 struct StaveLineView_Previews: PreviewProvider {
     static var previews: some View {
-        StaveLineView()
+        StaveLine()
     }
 }
