@@ -21,11 +21,13 @@ struct LevelView: View {
                         GameView(durations: level.settings.durations,
                                  pitches: level.settings.pitches, answers: level.settings.answers)
                     } label: {
-                        Circle()
-                            .foregroundColor(.blue)
-                            .overlay(Text("\(level.name)"))
-                            .foregroundColor(.white)
+                        Label("\(level.name)", systemImage: "music.note.list")
+//                        Text("\(level.name)")
+                            .padding()
+                            .background(RoundedRectangle(cornerRadius: 8).fill(Color.cyan))
+//                            .clipShape(Circle())
                     }
+                    .buttonStyle(PlainButtonStyle())
                 }
             }
             .padding(20)
