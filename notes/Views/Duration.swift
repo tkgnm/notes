@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum NoteValue {
+enum Duration: String, Decodable {
     case quaver, crotchet, minim, semibreve
 }

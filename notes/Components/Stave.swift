@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct StaveView: View {
+struct Stave: View {
     
-    var noteValue: NoteValue
+    var noteValue: Duration
     var pitches: [Pitch]
     var padding: CGFloat = 4
     
@@ -21,13 +21,13 @@ struct StaveView: View {
         
         ZStack {
             VStack {
-                StaveLineView(padding: padding)
-                StaveLineView(padding: padding)
-                StaveLineView(padding: padding)
-                StaveLineView(padding: padding)
-                StaveLineView(padding: padding)
+                StaveLine(padding: padding)
+                StaveLine(padding: padding)
+                StaveLine(padding: padding)
+                StaveLine(padding: padding)
+                StaveLine(padding: padding)
             }
-            NoteView(value: noteValue, pitch: pitches[0])
+            Note(value: noteValue, pitch: pitches[0])
         }
         .frame(width: 500, height: 200)
     }
@@ -35,6 +35,6 @@ struct StaveView: View {
 
 struct StaveView_Previews: PreviewProvider {
     static var previews: some View {
-        StaveView(noteValue: .semibreve, pitches: [.E5])
+        Stave(noteValue: .semibreve, pitches: [.E5])
     }
 }

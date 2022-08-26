@@ -9,14 +9,17 @@
 /* Begin PBXBuildFile section */
 		CF11C0D128AD62A90059F5E2 /* todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = CF11C0D028AD62A90059F5E2 /* todo.txt */; };
 		CF2193E628988B6300F36410 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2193E528988B6300F36410 /* StringExtensions.swift */; };
-		CF591CEC28AFF93400AD006E /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF591CEB28AFF93400AD006E /* Parameters.swift */; };
-		CF7878B22896C85C00730BB4 /* StaveLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7878B12896C85C00730BB4 /* StaveLineView.swift */; };
-		CF7878B42896CAD200730BB4 /* ImageRenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7878B32896CAD200730BB4 /* ImageRenderView.swift */; };
-		CF92F0CF28983E5F004937F7 /* StaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF92F0CE28983E5F004937F7 /* StaveView.swift */; };
-		CF92F0D128984087004937F7 /* NoteValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF92F0D028984087004937F7 /* NoteValue.swift */; };
+		CF7878B22896C85C00730BB4 /* StaveLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7878B12896C85C00730BB4 /* StaveLine.swift */; };
+		CF7878B42896CAD200730BB4 /* NoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7878B32896CAD200730BB4 /* NoteImage.swift */; };
+		CF92F0CF28983E5F004937F7 /* Stave.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF92F0CE28983E5F004937F7 /* Stave.swift */; };
+		CF92F0D128984087004937F7 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF92F0D028984087004937F7 /* Duration.swift */; };
 		CF92F0D328984F6D004937F7 /* PitchesDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF92F0D228984F6D004937F7 /* PitchesDictionary.swift */; };
 		CF93456128ABF907000DF9C8 /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF93456028ABF907000DF9C8 /* LevelView.swift */; };
-		CFB37B31287577780004087A /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB37B30287577780004087A /* NoteView.swift */; };
+		CFB37B31287577780004087A /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB37B30287577780004087A /* Note.swift */; };
+		CFEF501228B3F00D00CC03C4 /* levels.json in Resources */ = {isa = PBXBuildFile; fileRef = CFEF501128B3F00D00CC03C4 /* levels.json */; };
+		CFEF501428B3F13B00CC03C4 /* Levels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEF501328B3F13B00CC03C4 /* Levels.swift */; };
+		CFEF501628B3F34B00CC03C4 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEF501528B3F34B00CC03C4 /* BundleExtensions.swift */; };
+		CFF07E4B28B94E49001D8C12 /* LevelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF07E4A28B94E49001D8C12 /* LevelButton.swift */; };
 		CFF8D306286F857900B04330 /* notesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF8D305286F857900B04330 /* notesApp.swift */; };
 		CFF8D308286F857900B04330 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF8D307286F857900B04330 /* GameView.swift */; };
 		CFF8D30A286F857A00B04330 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF8D309286F857A00B04330 /* Assets.xcassets */; };
@@ -26,14 +29,17 @@
 /* Begin PBXFileReference section */
 		CF11C0D028AD62A90059F5E2 /* todo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = todo.txt; sourceTree = "<group>"; };
 		CF2193E528988B6300F36410 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
-		CF591CEB28AFF93400AD006E /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
-		CF7878B12896C85C00730BB4 /* StaveLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaveLineView.swift; sourceTree = "<group>"; };
-		CF7878B32896CAD200730BB4 /* ImageRenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRenderView.swift; sourceTree = "<group>"; };
-		CF92F0CE28983E5F004937F7 /* StaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaveView.swift; sourceTree = "<group>"; };
-		CF92F0D028984087004937F7 /* NoteValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteValue.swift; sourceTree = "<group>"; };
+		CF7878B12896C85C00730BB4 /* StaveLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaveLine.swift; sourceTree = "<group>"; };
+		CF7878B32896CAD200730BB4 /* NoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteImage.swift; sourceTree = "<group>"; };
+		CF92F0CE28983E5F004937F7 /* Stave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stave.swift; sourceTree = "<group>"; };
+		CF92F0D028984087004937F7 /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 		CF92F0D228984F6D004937F7 /* PitchesDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchesDictionary.swift; sourceTree = "<group>"; };
 		CF93456028ABF907000DF9C8 /* LevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
-		CFB37B30287577780004087A /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
+		CFB37B30287577780004087A /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		CFEF501128B3F00D00CC03C4 /* levels.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = levels.json; sourceTree = "<group>"; };
+		CFEF501328B3F13B00CC03C4 /* Levels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Levels.swift; sourceTree = "<group>"; };
+		CFEF501528B3F34B00CC03C4 /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
+		CFF07E4A28B94E49001D8C12 /* LevelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelButton.swift; sourceTree = "<group>"; };
 		CFF8D302286F857900B04330 /* experiment wiht offset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "experiment wiht offset.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF8D305286F857900B04330 /* notesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notesApp.swift; sourceTree = "<group>"; };
 		CFF8D307286F857900B04330 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -52,6 +58,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CFF07E4728B7BA87001D8C12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CF93456028ABF907000DF9C8 /* LevelView.swift */,
+				CFF8D307286F857900B04330 /* GameView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CFF07E4828B7BA93001D8C12 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				CF92F0D028984087004937F7 /* Duration.swift */,
+				CF92F0D228984F6D004937F7 /* PitchesDictionary.swift */,
+				CF2193E528988B6300F36410 /* StringExtensions.swift */,
+				CFEF501528B3F34B00CC03C4 /* BundleExtensions.swift */,
+				CFEF501328B3F13B00CC03C4 /* Levels.swift */,
+			);
+			name = Other;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CFF07E4928B7C287001D8C12 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CF92F0CE28983E5F004937F7 /* Stave.swift */,
+				CFF07E4A28B94E49001D8C12 /* LevelButton.swift */,
+				CF7878B12896C85C00730BB4 /* StaveLine.swift */,
+				CFB37B30287577780004087A /* Note.swift */,
+				CF7878B32896CAD200730BB4 /* NoteImage.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		CFF8D2F9286F857900B04330 = {
 			isa = PBXGroup;
 			children = (
@@ -72,16 +112,10 @@
 			isa = PBXGroup;
 			children = (
 				CFF8D305286F857900B04330 /* notesApp.swift */,
-				CF93456028ABF907000DF9C8 /* LevelView.swift */,
-				CFF8D307286F857900B04330 /* GameView.swift */,
-				CF591CEB28AFF93400AD006E /* Parameters.swift */,
-				CF92F0CE28983E5F004937F7 /* StaveView.swift */,
-				CF7878B12896C85C00730BB4 /* StaveLineView.swift */,
-				CFB37B30287577780004087A /* NoteView.swift */,
-				CF7878B32896CAD200730BB4 /* ImageRenderView.swift */,
-				CF92F0D028984087004937F7 /* NoteValue.swift */,
-				CF92F0D228984F6D004937F7 /* PitchesDictionary.swift */,
-				CF2193E528988B6300F36410 /* StringExtensions.swift */,
+				CFF07E4928B7C287001D8C12 /* Components */,
+				CFF07E4828B7BA93001D8C12 /* Other */,
+				CFF07E4728B7BA87001D8C12 /* Views */,
+				CFEF501128B3F00D00CC03C4 /* levels.json */,
 				CF11C0D028AD62A90059F5E2 /* todo.txt */,
 				CFF8D309286F857A00B04330 /* Assets.xcassets */,
 				CFF8D30B286F857A00B04330 /* Preview Content */,
@@ -157,6 +191,7 @@
 			files = (
 				CFF8D30D286F857A00B04330 /* Preview Assets.xcassets in Resources */,
 				CF11C0D128AD62A90059F5E2 /* todo.txt in Resources */,
+				CFEF501228B3F00D00CC03C4 /* levels.json in Resources */,
 				CFF8D30A286F857A00B04330 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,16 +204,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF92F0D328984F6D004937F7 /* PitchesDictionary.swift in Sources */,
-				CF92F0CF28983E5F004937F7 /* StaveView.swift in Sources */,
-				CF7878B42896CAD200730BB4 /* ImageRenderView.swift in Sources */,
+				CF92F0CF28983E5F004937F7 /* Stave.swift in Sources */,
+				CF7878B42896CAD200730BB4 /* NoteImage.swift in Sources */,
 				CF2193E628988B6300F36410 /* StringExtensions.swift in Sources */,
 				CFF8D308286F857900B04330 /* GameView.swift in Sources */,
-				CF7878B22896C85C00730BB4 /* StaveLineView.swift in Sources */,
-				CFB37B31287577780004087A /* NoteView.swift in Sources */,
-				CF92F0D128984087004937F7 /* NoteValue.swift in Sources */,
+				CFEF501628B3F34B00CC03C4 /* BundleExtensions.swift in Sources */,
+				CF7878B22896C85C00730BB4 /* StaveLine.swift in Sources */,
+				CFF07E4B28B94E49001D8C12 /* LevelButton.swift in Sources */,
+				CFEF501428B3F13B00CC03C4 /* Levels.swift in Sources */,
+				CFB37B31287577780004087A /* Note.swift in Sources */,
+				CF92F0D128984087004937F7 /* Duration.swift in Sources */,
 				CFF8D306286F857900B04330 /* notesApp.swift in Sources */,
 				CF93456128ABF907000DF9C8 /* LevelView.swift in Sources */,
-				CF591CEC28AFF93400AD006E /* Parameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

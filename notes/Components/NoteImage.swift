@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ImageRenderView: View {
+struct NoteImage: View {
     
     var value: String
 
@@ -26,6 +26,6 @@ struct ImageRenderView: View {
 
 struct ImageRenderView_Previews: PreviewProvider {
     static var previews: some View {
-        ImageRenderView(value: "crotchet")
+        NoteImage(value: "crotchet")
     }
 }
