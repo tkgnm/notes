@@ -11,7 +11,7 @@ import SwiftUI
 struct notesApp: App {
     var body: some Scene {
         WindowGroup {
-            LevelView()
+            ContentView()
         }
     }
 }

@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct LevelView: View {
+struct ContentView: View {
 
     @State private var isShowingGameView = false
 
-    let levels: [Level] = Bundle.main.decode("levels.json")
+    let levels: [QuestionData] = Bundle.main.decode("levels.json")
 
     var body: some View {
         NavigationView {
@@ -51,6 +51,6 @@ struct LevelView: View {
 
 struct LevelView_Previews: PreviewProvider {
     static var previews: some View {
-        LevelView()
+        ContentView()
     }
 }

@@ -1,9 +1,7 @@
-[
-    {
+[{
         "level": "Beginner",
         "id": 1,
-        "modules": [
-            {
+        "modules": [{
                 "id": 1,
                 "name": "Pitches",
                 "sfSymbol": "music.note.list",
@@ -42,6 +40,5 @@
                 }
             }
         ]
-    }
-]
+    }]
 

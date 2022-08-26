@@ -3,9 +3,10 @@ x 1) get it to tell the user when they've answered something incorrectly
     https://www.hackingwithswift.com/books/ios-swiftui/creating-explicit-animations
 x 2) get the easy/hard buttons to do different configurations
 x 5) get it to work in dark mode
+x 1) get your app to decode using generics
 
 
-2) get a manager class to do all the generating of functions and answers for the review 
+2) get a manager class to do all the generating of functions and answers for the review
 3) implement a 'custom' level that lets users choose the parameteres
 4) get it to work with different clefs
 6) last 5 seconds play a little sound to countdown
@@ -24,3 +25,5 @@ ______
 2) make a LevelButton component (same as above)
 3) rather than having a ticker, put in a progress/timer bar!
 4) implement a category in the JSON so that you can lay out your HStack levels in a scrollable VStack. The category could also determine the button colour. You can then make a title for the game view based on this information.
+5) create instant feedback on correct/incorrect answers (see answer model, and answer model row). for this you should make 1) answer model, 2) answer button view. the hard bit, is you need to say which answer is correct and which answer isnt - perhaps a manager to generate each button along with the correct answers? 
+6) interesting stuff on the decoding bit which actually does quite a lot of logic, you could use this but perhaps make it all happen in a manager isntead
