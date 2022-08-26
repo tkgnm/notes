@@ -1,24 +1,47 @@
 [
     {
+        "level": "Beginner",
         "id": 1,
-        "name": "Easy",
-        "settings": {
-            "durations": ["crotchet"],
-            "pitches": ["F4", "G4", "A4", "B4", "C5", "D5", "E5"],
-            "answers": ["C", "D", "E", "F", "G", "A", "B"]
-
-        }
+        "modules": [
+            {
+                "id": 1,
+                "name": "Pitches",
+                "sfSymbol": "music.note.list",
+                "settings": {
+                    "durations": ["crotchet"],
+                    "pitches": ["F4", "G4", "A4", "B4", "C5", "D5", "E5"],
+                    "answers": ["C", "D", "E", "F", "G", "A", "B"]
+                }
+            }
+        ]
     },
-
+    
     {
+        "level": "Intermediate",
         "id": 2,
-        "name": "Hard",
-        "settings": {
-            "durations": ["quaver", "crotchet", "minim", "semibreve"],
-            "pitches": ["D4", "E4", "F4", "G4", "A4", "B4", "C5", "D5", "E5", "F5", "G5", "A5"],
-            "answers": ["C", "D", "E", "F", "G", "A", "B"]
+        "modules": [
+            {
+                "id": 1,
+                "name": "Note values",
+                "sfSymbol": "music.quarternote.3",
+                "settings": {
+                    "durations": ["quaver", "crotchet", "minim", "semibreve"],
+                    "pitches": ["D4", "E4", "F4", "G4", "A4", "B4", "C5", "D5", "E5", "F5", "G5", "A5"],
+                    "answers": ["C", "D", "E", "F", "G", "A", "B"]
+                }
+            },
 
-        }
+            {
+                "id": 2,
+                "name": "Pitches",
+                "sfSymbol": "music.note.list",
+                "settings": {
+                    "durations": ["quaver", "crotchet", "minim", "semibreve"],
+                    "pitches": ["D4", "E4", "F4", "G4", "A4", "B4", "C5", "D5", "E5", "F5", "G5", "A5"],
+                    "answers": ["C", "D", "E", "F", "G", "A", "B"]
+                }
+            }
+        ]
     }
 ]
 

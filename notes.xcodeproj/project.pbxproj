@@ -19,6 +19,7 @@
 		CFEF501228B3F00D00CC03C4 /* levels.json in Resources */ = {isa = PBXBuildFile; fileRef = CFEF501128B3F00D00CC03C4 /* levels.json */; };
 		CFEF501428B3F13B00CC03C4 /* Levels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEF501328B3F13B00CC03C4 /* Levels.swift */; };
 		CFEF501628B3F34B00CC03C4 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEF501528B3F34B00CC03C4 /* BundleExtensions.swift */; };
+		CFF07E4B28B94E49001D8C12 /* LevelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF07E4A28B94E49001D8C12 /* LevelButton.swift */; };
 		CFF8D306286F857900B04330 /* notesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF8D305286F857900B04330 /* notesApp.swift */; };
 		CFF8D308286F857900B04330 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF8D307286F857900B04330 /* GameView.swift */; };
 		CFF8D30A286F857A00B04330 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF8D309286F857A00B04330 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 		CFEF501128B3F00D00CC03C4 /* levels.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = levels.json; sourceTree = "<group>"; };
 		CFEF501328B3F13B00CC03C4 /* Levels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Levels.swift; sourceTree = "<group>"; };
 		CFEF501528B3F34B00CC03C4 /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
+		CFF07E4A28B94E49001D8C12 /* LevelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelButton.swift; sourceTree = "<group>"; };
 		CFF8D302286F857900B04330 /* experiment wiht offset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "experiment wiht offset.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF8D305286F857900B04330 /* notesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notesApp.swift; sourceTree = "<group>"; };
 		CFF8D307286F857900B04330 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				CF92F0CE28983E5F004937F7 /* Stave.swift */,
+				CFF07E4A28B94E49001D8C12 /* LevelButton.swift */,
 				CF7878B12896C85C00730BB4 /* StaveLine.swift */,
 				CFB37B30287577780004087A /* Note.swift */,
 				CF7878B32896CAD200730BB4 /* NoteImage.swift */,
@@ -207,6 +210,7 @@
 				CFF8D308286F857900B04330 /* GameView.swift in Sources */,
 				CFEF501628B3F34B00CC03C4 /* BundleExtensions.swift in Sources */,
 				CF7878B22896C85C00730BB4 /* StaveLine.swift in Sources */,
+				CFF07E4B28B94E49001D8C12 /* LevelButton.swift in Sources */,
 				CFEF501428B3F13B00CC03C4 /* Levels.swift in Sources */,
 				CFB37B31287577780004087A /* Note.swift in Sources */,
 				CF92F0D128984087004937F7 /* Duration.swift in Sources */,
