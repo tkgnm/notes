@@ -7,26 +7,21 @@
 
 import SwiftUI
 
-struct LevelView: View {
+struct ContentView: View {
 
-    @State private var isShowingGameView = false
-
-    let levels: [Level] = Bundle.main.decode("levels.json")
+    let levels: [QuestionData] = Bundle.main.decode("levels.json")
 
     var body: some View {
         NavigationView {
             VStack {
                 ForEach(levels) { level in
                     Text("\(level.level)")
-//                        .font(.headline())
                         .font(.system(size: 24, weight: .bold))
                     HStack {
                         ForEach(level.modules) { module in
                             let settings = module.settings
                             NavigationLink {
-                                GameView(durations: settings.durations,
-                                         pitches: settings.pitches,
-                                         answers: settings.answers)
+                                QuestionView(questionManager: QuestionManager(settings: settings))
                             } label: {
                                 VStack {
                                     Image(systemName: module.sfSymbol)
@@ -51,6 +46,6 @@ struct LevelView: View {
 
 struct LevelView_Previews: PreviewProvider {
     static var previews: some View {
-        LevelView()
+        ContentView()
     }
 }

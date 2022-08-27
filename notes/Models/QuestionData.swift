@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Level: Decodable, Identifiable {
+struct QuestionData: Decodable, Identifiable {
     var level: String
     var id: Int
     var modules: [Module]
