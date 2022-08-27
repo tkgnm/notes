@@ -14,7 +14,6 @@ struct QuestionData: Decodable, Identifiable {
 }
 
 struct Module: Decodable, Identifiable {
-
     var id: Int
     var name: String
     var sfSymbol: String

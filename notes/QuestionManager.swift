@@ -32,6 +32,8 @@ class QuestionManager: ObservableObject {
 
     init(settings: Settings) {
         self.settings = settings
+
+//        appending settings to empty arrays
         durations += settings.durations
         pitches += settings.pitches
         answers += settings.answers
@@ -40,12 +42,13 @@ class QuestionManager: ObservableObject {
         self.duration = durations.randomElement()!
     }
 
+//    gets new question for the player
     func setQuestion() {
         correctAnswer = pitches.randomElement()!
         duration = durations.randomElement()!
-//        correctAnswer = question
     }
 
+//    controls logic for when a button is pressed
     func selectAnswer(at index: Int) {
         if totalQuestions == 0 {
             startTimer()
@@ -61,6 +64,7 @@ class QuestionManager: ObservableObject {
 
     }
 
+//    converts a double to a percentage as a string
     func calculateAccuracy(for double: Double) -> String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .percent
