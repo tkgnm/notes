@@ -20,8 +20,9 @@
 		CFEF501428B3F13B00CC03C4 /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEF501328B3F13B00CC03C4 /* QuestionData.swift */; };
 		CFEF501628B3F34B00CC03C4 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEF501528B3F34B00CC03C4 /* BundleExtensions.swift */; };
 		CFF07E4B28B94E49001D8C12 /* LevelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF07E4A28B94E49001D8C12 /* LevelButton.swift */; };
+		CFF07E6828B98237001D8C12 /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF07E6728B98237001D8C12 /* QuestionManager.swift */; };
+		CFF07E6A28B98CC0001D8C12 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF07E6928B98CC0001D8C12 /* QuestionView.swift */; };
 		CFF8D306286F857900B04330 /* notesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF8D305286F857900B04330 /* notesApp.swift */; };
-		CFF8D308286F857900B04330 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF8D307286F857900B04330 /* GameView.swift */; };
 		CFF8D30A286F857A00B04330 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF8D309286F857A00B04330 /* Assets.xcassets */; };
 		CFF8D30D286F857A00B04330 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF8D30C286F857A00B04330 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -40,9 +41,10 @@
 		CFEF501328B3F13B00CC03C4 /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
 		CFEF501528B3F34B00CC03C4 /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
 		CFF07E4A28B94E49001D8C12 /* LevelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelButton.swift; sourceTree = "<group>"; };
+		CFF07E6728B98237001D8C12 /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionManager.swift; path = notes/QuestionManager.swift; sourceTree = SOURCE_ROOT; };
+		CFF07E6928B98CC0001D8C12 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		CFF8D302286F857900B04330 /* experiment wiht offset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "experiment wiht offset.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF8D305286F857900B04330 /* notesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notesApp.swift; sourceTree = "<group>"; };
-		CFF8D307286F857900B04330 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		CFF8D309286F857A00B04330 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFF8D30C286F857A00B04330 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,7 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				CF93456028ABF907000DF9C8 /* ContentView.swift */,
-				CFF8D307286F857900B04330 /* GameView.swift */,
+				CFF07E6928B98CC0001D8C12 /* QuestionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				CFF8D305286F857900B04330 /* notesApp.swift */,
+				CFF07E6728B98237001D8C12 /* QuestionManager.swift */,
 				CFF07E6628B9563C001D8C12 /* Models */,
 				CFF07E4928B7C287001D8C12 /* Components */,
 				CFF07E4828B7BA93001D8C12 /* Extensions */,
@@ -212,14 +215,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF92F0D328984F6D004937F7 /* PitchesDictionary.swift in Sources */,
+				CFF07E6828B98237001D8C12 /* QuestionManager.swift in Sources */,
 				CF92F0CF28983E5F004937F7 /* Stave.swift in Sources */,
 				CF7878B42896CAD200730BB4 /* NoteImage.swift in Sources */,
 				CF2193E628988B6300F36410 /* StringExtensions.swift in Sources */,
-				CFF8D308286F857900B04330 /* GameView.swift in Sources */,
 				CFEF501628B3F34B00CC03C4 /* BundleExtensions.swift in Sources */,
 				CF7878B22896C85C00730BB4 /* StaveLine.swift in Sources */,
 				CFF07E4B28B94E49001D8C12 /* LevelButton.swift in Sources */,
 				CFEF501428B3F13B00CC03C4 /* QuestionData.swift in Sources */,
+				CFF07E6A28B98CC0001D8C12 /* QuestionView.swift in Sources */,
 				CFB37B31287577780004087A /* Note.swift in Sources */,
 				CF92F0D128984087004937F7 /* Duration.swift in Sources */,
 				CFF8D306286F857900B04330 /* notesApp.swift in Sources */,

@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @State private var isShowingGameView = false
-
     let levels: [QuestionData] = Bundle.main.decode("levels.json")
 
     var body: some View {
@@ -18,15 +16,12 @@ struct ContentView: View {
             VStack {
                 ForEach(levels) { level in
                     Text("\(level.level)")
-//                        .font(.headline())
                         .font(.system(size: 24, weight: .bold))
                     HStack {
                         ForEach(level.modules) { module in
                             let settings = module.settings
                             NavigationLink {
-                                GameView(durations: settings.durations,
-                                         pitches: settings.pitches,
-                                         answers: settings.answers)
+                                QuestionView(questionManager: QuestionManager(settings: settings))
                             } label: {
                                 VStack {
                                     Image(systemName: module.sfSymbol)
