@@ -16,6 +16,7 @@
 		CF92F0D328984F6D004937F7 /* PitchesDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF92F0D228984F6D004937F7 /* PitchesDictionary.swift */; };
 		CF93456128ABF907000DF9C8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF93456028ABF907000DF9C8 /* ContentView.swift */; };
 		CFB37B31287577780004087A /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB37B30287577780004087A /* Note.swift */; };
+		CFD8CEF828BD3D7A009A24D6 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD8CEF728BD3D7A009A24D6 /* Answer.swift */; };
 		CFEF501228B3F00D00CC03C4 /* levels.json in Resources */ = {isa = PBXBuildFile; fileRef = CFEF501128B3F00D00CC03C4 /* levels.json */; };
 		CFEF501428B3F13B00CC03C4 /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEF501328B3F13B00CC03C4 /* QuestionData.swift */; };
 		CFEF501628B3F34B00CC03C4 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEF501528B3F34B00CC03C4 /* BundleExtensions.swift */; };
@@ -37,6 +38,7 @@
 		CF92F0D228984F6D004937F7 /* PitchesDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchesDictionary.swift; sourceTree = "<group>"; };
 		CF93456028ABF907000DF9C8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CFB37B30287577780004087A /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		CFD8CEF728BD3D7A009A24D6 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		CFEF501128B3F00D00CC03C4 /* levels.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = levels.json; sourceTree = "<group>"; };
 		CFEF501328B3F13B00CC03C4 /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
 		CFEF501528B3F34B00CC03C4 /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				CFEF501328B3F13B00CC03C4 /* QuestionData.swift */,
+				CFD8CEF728BD3D7A009A24D6 /* Answer.swift */,
 				CF92F0D028984087004937F7 /* Duration.swift */,
 				CF92F0D228984F6D004937F7 /* PitchesDictionary.swift */,
 			);
@@ -226,6 +229,7 @@
 				CFF07E6A28B98CC0001D8C12 /* QuestionView.swift in Sources */,
 				CFB37B31287577780004087A /* Note.swift in Sources */,
 				CF92F0D128984087004937F7 /* Duration.swift in Sources */,
+				CFD8CEF828BD3D7A009A24D6 /* Answer.swift in Sources */,
 				CFF8D306286F857900B04330 /* notesApp.swift in Sources */,
 				CF93456128ABF907000DF9C8 /* ContentView.swift in Sources */,
 			);
