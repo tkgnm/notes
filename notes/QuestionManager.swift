@@ -28,7 +28,12 @@ class QuestionManager: ObservableObject {
 //  variables that determine game logic
     @Published var answerSelected = false
     @Published var gameOver = false
+
+//  timer variables
+
     @Published var ticker = 10
+    @Published var almostOver = false
+    @Published var timerStarted = false
 
     init(settings: Settings) {
         self.settings = settings
@@ -76,15 +81,20 @@ class QuestionManager: ObservableObject {
         ticker = 10
         totalQuestions = 0
         accuracy = 0
+        displayAccuracy = "0%"
     }
 
     func startTimer() {
+        timerStarted = true
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
             self.ticker -= 1
             if self.ticker <= 0 {
                 self.gameOver = true
                 self.resetGame()
                 timer.invalidate()
+            }
+            if self.ticker <= 3 {
+                self.almostOver = true
             }
         }
     }

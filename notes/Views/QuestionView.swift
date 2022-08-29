@@ -12,9 +12,22 @@ struct QuestionView: View {
     @ObservedObject var questionManager: QuestionManager
     @Environment(\.dismiss) var dismiss
 
+//    @State private var almostOver = false
+//    @State private var timerStarted = false
+
     var body: some View {
         NavigationView{
             VStack {
+
+                HStack {
+                    RoundedRectangle(cornerRadius: 5)
+                        .frame(width: questionManager.timerStarted ? 0 : .infinity, height: 10, alignment: .leading)
+                        .foregroundColor(questionManager.almostOver ? .red : .blue)
+                    Spacer()
+                    Text("\(questionManager.ticker)")
+                }
+                .animation(.linear(duration: Double(questionManager.ticker)), value: questionManager.timerStarted)
+
                 Text("Time remaining: \(questionManager.ticker)")
                 Spacer()
                 Text("You score is \(questionManager.score)/\(questionManager.totalQuestions)")
