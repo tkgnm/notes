@@ -23,15 +23,21 @@ class QuestionManager: ObservableObject {
 
 //   variables that set the answer
     @Published var correctAnswer: Pitch
-    @Published var duration: Duration = .crotchet
+    @Published var duration: Duration
 
 //  variables that determine game logic
     @Published var answerSelected = false
     @Published var gameOver = false
+
+//  timer variables
     @Published var ticker = 10
+    @Published var almostOver = false
+    @Published var timerStarted = false
 
     init(settings: Settings) {
         self.settings = settings
+
+//        appending settings to empty arrays
         durations += settings.durations
         pitches += settings.pitches
         answers += settings.answers
@@ -40,12 +46,13 @@ class QuestionManager: ObservableObject {
         self.duration = durations.randomElement()!
     }
 
+//    gets new question for the player
     func setQuestion() {
         correctAnswer = pitches.randomElement()!
         duration = durations.randomElement()!
-//        correctAnswer = question
     }
 
+//    controls logic for when a button is pressed
     func selectAnswer(at index: Int) {
         if totalQuestions == 0 {
             startTimer()
@@ -61,6 +68,7 @@ class QuestionManager: ObservableObject {
 
     }
 
+//    converts a double to a percentage as a string
     func calculateAccuracy(for double: Double) -> String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .percent
@@ -72,15 +80,20 @@ class QuestionManager: ObservableObject {
         ticker = 10
         totalQuestions = 0
         accuracy = 0
+        displayAccuracy = "0%"
     }
 
     func startTimer() {
+        timerStarted = true
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
             self.ticker -= 1
             if self.ticker <= 0 {
                 self.gameOver = true
                 self.resetGame()
                 timer.invalidate()
+            }
+            if self.ticker <= 3 {
+                self.almostOver = true
             }
         }
     }
