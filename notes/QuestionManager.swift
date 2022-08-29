@@ -23,14 +23,13 @@ class QuestionManager: ObservableObject {
 
 //   variables that set the answer
     @Published var correctAnswer: Pitch
-    @Published var duration: Duration = .crotchet
+    @Published var duration: Duration
 
 //  variables that determine game logic
     @Published var answerSelected = false
     @Published var gameOver = false
 
 //  timer variables
-
     @Published var ticker = 10
     @Published var almostOver = false
     @Published var timerStarted = false
