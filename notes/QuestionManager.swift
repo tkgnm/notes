@@ -15,6 +15,8 @@ class QuestionManager: ObservableObject {
     var pitches = [Pitch]()
     var answers = [String]()
 
+    var answers_2 = [Answer]()
+
 //   variables to keep track of score
     @Published var score = 0
     @Published var totalQuestions = 0
@@ -34,6 +36,8 @@ class QuestionManager: ObservableObject {
     @Published var almostOver = false
     @Published var timerStarted = false
 
+    @Published var disabled = false
+
     init(settings: Settings) {
         self.settings = settings
 
@@ -44,6 +48,14 @@ class QuestionManager: ObservableObject {
 
         self.correctAnswer = pitches.randomElement()!
         self.duration = durations.randomElement()!
+
+        for answer in answers {
+            if answer == self.correctAnswer.rawValue {
+                answers_2.append(Answer(answer: answer, isCorrect: true))
+            } else {
+                answers_2.append(Answer(answer: answer, isCorrect: false))
+            }
+        }
     }
 
 //    gets new question for the player
@@ -54,11 +66,18 @@ class QuestionManager: ObservableObject {
 
 //    controls logic for when a button is pressed
     func selectAnswer(at index: Int) {
+
         if totalQuestions == 0 {
             startTimer()
         }
-        if answers[index] == correctAnswer.rawValue[0] {
+        
+        if answers_2[index].isCorrect == true {
             score += 1
+        } else {
+            disabled = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.disabled = false
+            }
         }
         totalQuestions += 1
 

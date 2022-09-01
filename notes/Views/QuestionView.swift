@@ -18,7 +18,6 @@ struct QuestionView: View {
     var body: some View {
         NavigationView{
             VStack {
-
                 HStack {
                     RoundedRectangle(cornerRadius: 5)
                         .frame(width: questionManager.timerStarted ? 0 : .infinity, height: 10, alignment: .leading)
@@ -41,17 +40,18 @@ struct QuestionView: View {
                 }
 
                 HStack {
-                    ForEach(0..<questionManager.answers.count, id: \.self) { number in
+                    ForEach(0..<questionManager.answers_2.count, id: \.self) { number in
                         Button {
                             questionManager.selectAnswer(at: number)
                         } label: {
-                            Text(questionManager.answers[number])
+                            Text(questionManager.answers_2[number].answer)
                                 .font(.headline)
                                 .foregroundColor(Color(UIColor.white))
                                 .frame(width: 40, height: 80)
                                 .background(Color(UIColor.systemBlue))
                                 .clipShape(Capsule())
                         }
+                        .disabled(questionManager.disabled)
                     }
                 }
                 Spacer()
