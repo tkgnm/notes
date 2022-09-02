@@ -22,7 +22,6 @@ struct AnswerButton: View {
             .background(Color(UIColor.systemBlue))
             .clipShape(Capsule())
             .onTapGesture {
-//
                 questionManager.submitAnswer(answer)
             }
     }

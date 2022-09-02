@@ -43,6 +43,7 @@ struct QuestionView: View {
                     ForEach(questionManager.answers_2, id:\.id) { answer in 
                         AnswerButton(questionManager: questionManager, answer: answer)
                     }
+                    .disabled(questionManager.disabled)
 //                    ForEach(0..<questionManager.answers_2.count, id: \.self) { number in
 //                        Button {
 //                            questionManager.selectAnswer(at: number)

@@ -84,10 +84,10 @@ class QuestionManager: ObservableObject {
         if answer.isCorrect {
             score += 1
         } else {
-//            disabled = true
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-//                self.disabled = false
-//            }
+            disabled = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.disabled = false
+            }
         }
 
         totalQuestions += 1
