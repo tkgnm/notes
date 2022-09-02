@@ -40,19 +40,22 @@ struct QuestionView: View {
                 }
 
                 HStack {
-                    ForEach(0..<questionManager.answers_2.count, id: \.self) { number in
-                        Button {
-                            questionManager.selectAnswer(at: number)
-                        } label: {
-                            Text(questionManager.answers_2[number].answer)
-                                .font(.headline)
-                                .foregroundColor(Color(UIColor.white))
-                                .frame(width: 40, height: 80)
-                                .background(Color(UIColor.systemBlue))
-                                .clipShape(Capsule())
-                        }
-                        .disabled(questionManager.disabled)
+                    ForEach(questionManager.answers_2, id:\.id) { answer in 
+                        AnswerButton(questionManager: questionManager, answer: answer)
                     }
+//                    ForEach(0..<questionManager.answers_2.count, id: \.self) { number in
+//                        Button {
+//                            questionManager.selectAnswer(at: number)
+//                        } label: {
+//                            Text(questionManager.answers_2[number].answerText)
+//                                .font(.headline)
+//                                .foregroundColor(Color(UIColor.white))
+//                                .frame(width: 40, height: 80)
+//                                .background(Color(UIColor.systemBlue))
+//                                .clipShape(Capsule())
+//                        }
+//                        .disabled(questionManager.disabled)
+//                    }
                 }
                 Spacer()
                 Spacer()

@@ -50,10 +50,10 @@ class QuestionManager: ObservableObject {
         self.duration = durations.randomElement()!
 
         for answer in answers {
-            if answer == self.correctAnswer.rawValue {
-                answers_2.append(Answer(answer: answer, isCorrect: true))
+            if answer == self.correctAnswer.rawValue[0] {
+                answers_2.append(Answer(answerText: answer, isCorrect: true))
             } else {
-                answers_2.append(Answer(answer: answer, isCorrect: false))
+                answers_2.append(Answer(answerText: answer, isCorrect: false))
             }
         }
     }
@@ -62,23 +62,34 @@ class QuestionManager: ObservableObject {
     func setQuestion() {
         correctAnswer = pitches.randomElement()!
         duration = durations.randomElement()!
+        answers_2.removeAll()
+
+        for answer in answers {
+            if answer == self.correctAnswer.rawValue[0] {
+                answers_2.append(Answer(answerText: answer, isCorrect: true))
+            } else {
+                answers_2.append(Answer(answerText: answer, isCorrect: false))
+            }
+        }
     }
 
-//    controls logic for when a button is pressed
-    func selectAnswer(at index: Int) {
+    func submitAnswer(_ answer: Answer) {
+
+        print (answer.isCorrect)
 
         if totalQuestions == 0 {
             startTimer()
         }
-        
-        if answers_2[index].isCorrect == true {
+
+        if answer.isCorrect {
             score += 1
         } else {
-            disabled = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                self.disabled = false
-            }
+//            disabled = true
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+//                self.disabled = false
+//            }
         }
+
         totalQuestions += 1
 
         accuracy = Double(score) / Double(totalQuestions)
