@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CF11C0D128AD62A90059F5E2 /* todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = CF11C0D028AD62A90059F5E2 /* todo.txt */; };
 		CF2193E628988B6300F36410 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2193E528988B6300F36410 /* StringExtensions.swift */; };
+		CF54E33628C67AAC0001A030 /* TimerBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54E33528C67AAC0001A030 /* TimerBar.swift */; };
 		CF688F0428C12EC6009454F8 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF688F0328C12EC6009454F8 /* Answer.swift */; };
 		CF7878B22896C85C00730BB4 /* StaveLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7878B12896C85C00730BB4 /* StaveLine.swift */; };
 		CF7878B42896CAD200730BB4 /* NoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7878B32896CAD200730BB4 /* NoteImage.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		CF11C0D028AD62A90059F5E2 /* todo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = todo.txt; sourceTree = "<group>"; };
 		CF2193E528988B6300F36410 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		CF54E33528C67AAC0001A030 /* TimerBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerBar.swift; sourceTree = "<group>"; };
 		CF688F0328C12EC6009454F8 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		CF7878B12896C85C00730BB4 /* StaveLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaveLine.swift; sourceTree = "<group>"; };
 		CF7878B32896CAD200730BB4 /* NoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteImage.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				CF688F0328C12EC6009454F8 /* Answer.swift */,
+				CF54E33528C67AAC0001A030 /* TimerBar.swift */,
 				CF92F0CE28983E5F004937F7 /* Stave.swift */,
 				CFF07E4A28B94E49001D8C12 /* LevelButton.swift */,
 				CF7878B12896C85C00730BB4 /* StaveLine.swift */,
@@ -236,6 +239,7 @@
 				CF92F0D128984087004937F7 /* Duration.swift in Sources */,
 				CFF8D306286F857900B04330 /* notesApp.swift in Sources */,
 				CF93456128ABF907000DF9C8 /* ContentView.swift in Sources */,
+				CF54E33628C67AAC0001A030 /* TimerBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

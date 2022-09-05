@@ -12,20 +12,21 @@ struct QuestionView: View {
     @ObservedObject var questionManager: QuestionManager
     @Environment(\.dismiss) var dismiss
 
-//    @State private var almostOver = false
-//    @State private var timerStarted = false
+    //    @State private var almostOver = false
+    //    @State private var timerStarted = false
 
     var body: some View {
         NavigationView{
             VStack {
-                HStack {
-                    RoundedRectangle(cornerRadius: 5)
-                        .frame(width: questionManager.timerStarted ? 0 : .infinity, height: 10, alignment: .leading)
-                        .foregroundColor(questionManager.almostOver ? .red : .blue)
-                    Spacer()
-                    Text("\(questionManager.ticker)")
+                GeometryReader { geometry in
+                    HStack {
+                        //                        RoundedRectangle(cornerRadius: 5)
+                        TimerBar(questionManager: questionManager, initialWidth: geometry.size.width * 0.9)
+                        Spacer()
+                        Text("\(questionManager.ticker)")
+                    }
                 }
-                .animation(.linear(duration: Double(questionManager.ticker)), value: questionManager.timerStarted)
+                .padding()
 
                 Text("Time remaining: \(questionManager.ticker)")
                 Spacer()
@@ -40,7 +41,7 @@ struct QuestionView: View {
                 }
 
                 HStack {
-                    ForEach(questionManager.answers, id:\.id) { answer in 
+                    ForEach(questionManager.answers, id:\.id) { answer in
                         AnswerButton(questionManager: questionManager, answer: answer)
                     }
                 }
