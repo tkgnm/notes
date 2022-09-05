@@ -60,6 +60,7 @@ class QuestionManager: ObservableObject {
 
 //    gets new question for the player
     func setQuestion() {
+        answerSelected = false
         correctAnswer = pitches.randomElement()!
         duration = durations.randomElement()!
         answers_2.removeAll()
@@ -74,8 +75,7 @@ class QuestionManager: ObservableObject {
     }
 
     func submitAnswer(_ answer: Answer) {
-
-        print (answer.isCorrect)
+        answerSelected = true
 
         if totalQuestions == 0 {
             startTimer()
@@ -83,6 +83,7 @@ class QuestionManager: ObservableObject {
 
         if answer.isCorrect {
             score += 1
+            setQuestion()
         } else {
             disabled = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
@@ -94,7 +95,6 @@ class QuestionManager: ObservableObject {
 
         accuracy = Double(score) / Double(totalQuestions)
         displayAccuracy = calculateAccuracy(for: accuracy)
-        setQuestion()
 
     }
 
