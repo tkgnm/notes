@@ -40,7 +40,7 @@ struct QuestionView: View {
                 }
 
                 HStack {
-                    ForEach(questionManager.answers_2, id:\.id) { answer in 
+                    ForEach(questionManager.answers, id:\.id) { answer in 
                         AnswerButton(questionManager: questionManager, answer: answer)
                     }
                     .disabled(questionManager.disabled)

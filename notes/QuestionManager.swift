@@ -13,9 +13,9 @@ class QuestionManager: ObservableObject {
 
     var durations = [Duration]()
     var pitches = [Pitch]()
-    var answers = [String]()
+    var answers = [Answer]()
 
-    var answers_2 = [Answer]()
+//    var answers_2 = [Answer]()
 
 //   variables to keep track of score
     @Published var score = 0
@@ -44,18 +44,16 @@ class QuestionManager: ObservableObject {
 //        appending settings to empty arrays
         durations += settings.durations
         pitches += settings.pitches
-        answers += settings.answers
+//        answers += settings.answers
 
         self.correctAnswer = pitches.randomElement()!
         self.duration = durations.randomElement()!
-
-        for answer in answers {
-            if answer == self.correctAnswer.rawValue[0] {
-                answers_2.append(Answer(answerText: answer, isCorrect: true))
-            } else {
-                answers_2.append(Answer(answerText: answer, isCorrect: false))
-            }
+        answers = settings.answers.map { answer in
+            Answer(answerText: answer, isCorrect: answer == self.correctAnswer.rawValue[0] ? true : false)
         }
+
+//        for answer in answers {
+//        }
     }
 
 //    gets new question for the player
@@ -63,14 +61,8 @@ class QuestionManager: ObservableObject {
         answerSelected = false
         correctAnswer = pitches.randomElement()!
         duration = durations.randomElement()!
-        answers_2.removeAll()
-
-        for answer in answers {
-            if answer == self.correctAnswer.rawValue[0] {
-                answers_2.append(Answer(answerText: answer, isCorrect: true))
-            } else {
-                answers_2.append(Answer(answerText: answer, isCorrect: false))
-            }
+        answers = answers.map { answer in
+            Answer(answerText: answer.answerText, isCorrect: answer.answerText == self.correctAnswer.rawValue[0] ? true : false)
         }
     }
 
