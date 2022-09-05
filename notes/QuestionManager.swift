@@ -34,7 +34,7 @@ class QuestionManager: ObservableObject {
     @Published var almostOver = false
     @Published var timerStarted = false
 
-    @Published var disabled = false
+    @Published var previousCorrect = true
 
     init(settings: Settings) {
         self.settings = settings
@@ -68,17 +68,16 @@ class QuestionManager: ObservableObject {
             startTimer()
         }
 
-        if answer.isCorrect {
+        if answer.isCorrect, previousCorrect == true {
             score += 1
             setQuestion()
+            totalQuestions += 1
+        } else if answer.isCorrect, previousCorrect == false {
+            setQuestion()
         } else {
-            disabled = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                self.disabled = false
-            }
+            previousCorrect = false
+            totalQuestions += 1
         }
-
-        totalQuestions += 1
 
         accuracy = Double(score) / Double(totalQuestions)
         displayAccuracy = calculateAccuracy(for: accuracy)
