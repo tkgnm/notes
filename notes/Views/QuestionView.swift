@@ -13,7 +13,7 @@ struct QuestionView: View {
     @Environment(\.dismiss) var dismiss
 
     var body: some View {
-        NavigationView{
+        NavigationView {
             VStack {
                 GeometryReader { geometry in
                     HStack {
@@ -24,12 +24,10 @@ struct QuestionView: View {
                 }
                 .padding()
 
-                Text("Time remaining: \(questionManager.ticker)")
-                Spacer()
                 Text("You score is \(questionManager.score)/\(questionManager.totalQuestions)")
                     .foregroundColor(.primary)
                 Text("Accuracy: \(questionManager.displayAccuracy)")
-                Spacer()
+
                 ZStack {
                     VStack {
                         Stave(noteValue: questionManager.duration, pitches: [questionManager.correctAnswer])
@@ -37,13 +35,22 @@ struct QuestionView: View {
                 }
 
                 HStack {
-                    ForEach(questionManager.answers, id:\.id) { answer in
-                        AnswerButton(questionManager: questionManager, answer: answer)
+                    GeometryReader { geometry in
+                        let buttonWidth = geometry.size.width / CGFloat(questionManager.answers.count + 1)
+
+                        HStack(alignment: .center, spacing: buttonWidth / CGFloat(questionManager.answers.count) + 1) {
+                            ForEach(questionManager.answers, id:\.id) { answer in
+                                AnswerButton(questionManager: questionManager, answer: answer, width: buttonWidth)
+                            }
+                        }
+                        .frame(width: geometry.size.width, alignment: .center)
                     }
                 }
-                Spacer()
-                Spacer()
+                .padding()
+//                Spacer()
+//                Spacer()
             }
+//            .background(Color.grezen)
         }
         .alert("Game over!", isPresented: $questionManager.gameOver) {
             Button("Okay") {
