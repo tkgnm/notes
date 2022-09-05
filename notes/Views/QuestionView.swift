@@ -12,15 +12,11 @@ struct QuestionView: View {
     @ObservedObject var questionManager: QuestionManager
     @Environment(\.dismiss) var dismiss
 
-    //    @State private var almostOver = false
-    //    @State private var timerStarted = false
-
     var body: some View {
         NavigationView{
             VStack {
                 GeometryReader { geometry in
                     HStack {
-                        //                        RoundedRectangle(cornerRadius: 5)
                         TimerBar(questionManager: questionManager, initialWidth: geometry.size.width * 0.9)
                         Spacer()
                         Text("\(questionManager.ticker)")
