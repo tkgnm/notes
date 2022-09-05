@@ -15,8 +15,6 @@ class QuestionManager: ObservableObject {
     var pitches = [Pitch]()
     var answers = [Answer]()
 
-//    var answers_2 = [Answer]()
-
 //   variables to keep track of score
     @Published var score = 0
     @Published var totalQuestions = 0
@@ -44,16 +42,13 @@ class QuestionManager: ObservableObject {
 //        appending settings to empty arrays
         durations += settings.durations
         pitches += settings.pitches
-//        answers += settings.answers
 
         self.correctAnswer = pitches.randomElement()!
         self.duration = durations.randomElement()!
+
         answers = settings.answers.map { answer in
             Answer(answerText: answer, isCorrect: answer == self.correctAnswer.rawValue[0] ? true : false)
         }
-
-//        for answer in answers {
-//        }
     }
 
 //    gets new question for the player
