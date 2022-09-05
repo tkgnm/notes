@@ -18,7 +18,6 @@ struct QuestionView: View {
     var body: some View {
         NavigationView{
             VStack {
-
                 HStack {
                     RoundedRectangle(cornerRadius: 5)
                         .frame(width: questionManager.timerStarted ? 0 : .infinity, height: 10, alignment: .leading)
@@ -41,18 +40,23 @@ struct QuestionView: View {
                 }
 
                 HStack {
-                    ForEach(0..<questionManager.answers.count, id: \.self) { number in
-                        Button {
-                            questionManager.selectAnswer(at: number)
-                        } label: {
-                            Text(questionManager.answers[number])
-                                .font(.headline)
-                                .foregroundColor(Color(UIColor.white))
-                                .frame(width: 40, height: 80)
-                                .background(Color(UIColor.systemBlue))
-                                .clipShape(Capsule())
-                        }
+                    ForEach(questionManager.answers, id:\.id) { answer in 
+                        AnswerButton(questionManager: questionManager, answer: answer)
                     }
+                    .disabled(questionManager.disabled)
+//                    ForEach(0..<questionManager.answers_2.count, id: \.self) { number in
+//                        Button {
+//                            questionManager.selectAnswer(at: number)
+//                        } label: {
+//                            Text(questionManager.answers_2[number].answerText)
+//                                .font(.headline)
+//                                .foregroundColor(Color(UIColor.white))
+//                                .frame(width: 40, height: 80)
+//                                .background(Color(UIColor.systemBlue))
+//                                .clipShape(Capsule())
+//                        }
+//                        .disabled(questionManager.disabled)
+//                    }
                 }
                 Spacer()
                 Spacer()

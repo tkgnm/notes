@@ -13,7 +13,9 @@ class QuestionManager: ObservableObject {
 
     var durations = [Duration]()
     var pitches = [Pitch]()
-    var answers = [String]()
+    var answers = [Answer]()
+
+//    var answers_2 = [Answer]()
 
 //   variables to keep track of score
     @Published var score = 0
@@ -34,37 +36,57 @@ class QuestionManager: ObservableObject {
     @Published var almostOver = false
     @Published var timerStarted = false
 
+    @Published var disabled = false
+
     init(settings: Settings) {
         self.settings = settings
 
 //        appending settings to empty arrays
         durations += settings.durations
         pitches += settings.pitches
-        answers += settings.answers
+//        answers += settings.answers
 
         self.correctAnswer = pitches.randomElement()!
         self.duration = durations.randomElement()!
+        answers = settings.answers.map { answer in
+            Answer(answerText: answer, isCorrect: answer == self.correctAnswer.rawValue[0] ? true : false)
+        }
+
+//        for answer in answers {
+//        }
     }
 
 //    gets new question for the player
     func setQuestion() {
+        answerSelected = false
         correctAnswer = pitches.randomElement()!
         duration = durations.randomElement()!
+        answers = answers.map { answer in
+            Answer(answerText: answer.answerText, isCorrect: answer.answerText == self.correctAnswer.rawValue[0] ? true : false)
+        }
     }
 
-//    controls logic for when a button is pressed
-    func selectAnswer(at index: Int) {
+    func submitAnswer(_ answer: Answer) {
+        answerSelected = true
+
         if totalQuestions == 0 {
             startTimer()
         }
-        if answers[index] == correctAnswer.rawValue[0] {
+
+        if answer.isCorrect {
             score += 1
+            setQuestion()
+        } else {
+            disabled = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.disabled = false
+            }
         }
+
         totalQuestions += 1
 
         accuracy = Double(score) / Double(totalQuestions)
         displayAccuracy = calculateAccuracy(for: accuracy)
-        setQuestion()
 
     }
 
