@@ -22,6 +22,7 @@ struct ContentView: View {
                             let settings = module.settings
                             NavigationLink {
                                 QuestionView(questionManager: QuestionManager(settings: settings))
+                                    .navigationBarTitle("\(module.name)")
                             } label: {
                                 VStack {
                                     Image(systemName: module.sfSymbol)
