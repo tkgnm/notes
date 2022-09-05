@@ -11,21 +11,16 @@ struct AnswerButton: View {
 
     @ObservedObject var questionManager: QuestionManager
     var answer: Answer
-    @State private var isSelected = false
-
-    let red = Color(UIColor.systemRed)
-    let blue = Color(UIColor.systemBlue)
 
     var body: some View {
         Text(answer.answerText)
             .font(.headline)
             .foregroundColor(Color(UIColor.white))
             .frame(width: 40, height: 80)
-            .background(questionManager.answerSelected ? blue : red)
+            .background(questionManager.answerSelected ? answer.isCorrect ? .green : .red : .blue)
             .clipShape(Capsule())
             .onTapGesture {
                 questionManager.submitAnswer(answer)
-//                isSelected = true
             }
     }
 }

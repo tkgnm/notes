@@ -12,20 +12,17 @@ struct QuestionView: View {
     @ObservedObject var questionManager: QuestionManager
     @Environment(\.dismiss) var dismiss
 
-//    @State private var almostOver = false
-//    @State private var timerStarted = false
-
     var body: some View {
         NavigationView{
             VStack {
-                HStack {
-                    RoundedRectangle(cornerRadius: 5)
-                        .frame(width: questionManager.timerStarted ? 0 : .infinity, height: 10, alignment: .leading)
-                        .foregroundColor(questionManager.almostOver ? .red : .blue)
-                    Spacer()
-                    Text("\(questionManager.ticker)")
+                GeometryReader { geometry in
+                    HStack {
+                        TimerBar(questionManager: questionManager, initialWidth: geometry.size.width * 0.9)
+                        Spacer()
+                        Text("\(questionManager.ticker)")
+                    }
                 }
-                .animation(.linear(duration: Double(questionManager.ticker)), value: questionManager.timerStarted)
+                .padding()
 
                 Text("Time remaining: \(questionManager.ticker)")
                 Spacer()
@@ -40,23 +37,9 @@ struct QuestionView: View {
                 }
 
                 HStack {
-                    ForEach(questionManager.answers, id:\.id) { answer in 
+                    ForEach(questionManager.answers, id:\.id) { answer in
                         AnswerButton(questionManager: questionManager, answer: answer)
                     }
-                    .disabled(questionManager.disabled)
-//                    ForEach(0..<questionManager.answers_2.count, id: \.self) { number in
-//                        Button {
-//                            questionManager.selectAnswer(at: number)
-//                        } label: {
-//                            Text(questionManager.answers_2[number].answerText)
-//                                .font(.headline)
-//                                .foregroundColor(Color(UIColor.white))
-//                                .frame(width: 40, height: 80)
-//                                .background(Color(UIColor.systemBlue))
-//                                .clipShape(Capsule())
-//                        }
-//                        .disabled(questionManager.disabled)
-//                    }
                 }
                 Spacer()
                 Spacer()
@@ -64,6 +47,7 @@ struct QuestionView: View {
         }
         .alert("Game over!", isPresented: $questionManager.gameOver) {
             Button("Okay") {
+                questionManager.resetGame()
                 dismiss()
             }
         }
