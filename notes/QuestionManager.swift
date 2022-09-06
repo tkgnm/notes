@@ -10,7 +10,7 @@ import Foundation
 class QuestionManager: ObservableObject {
 
     let settings: Settings
-
+    
     var durations = [Duration]()
     var pitches = [Pitch]()
     var answers = [Answer]()
@@ -73,6 +73,7 @@ class QuestionManager: ObservableObject {
             setQuestion()
             totalQuestions += 1
         } else if answer.isCorrect, previousCorrect == false {
+            previousCorrect = true
             setQuestion()
         } else {
             previousCorrect = false

@@ -9,14 +9,13 @@ import SwiftUI
 
 struct StaveLine: View {
     
-    let width: CGFloat = 300
-    var padding: CGFloat = 4
-    let height: CGFloat = 4
+    var width: CGFloat = 300
+    var thickness: CGFloat = 4
     
     var body: some View {
         Color.primary
-            .frame(width: width, height: height, alignment: .center)
-            .padding(padding)
+            .frame(width: width, height: thickness, alignment: .center)
+//            .padding(.vertical, padding)
     }
 }
 
