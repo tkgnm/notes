@@ -19,6 +19,7 @@ struct AnswerButton: View {
             .foregroundColor(Color(UIColor.white))
             .frame(width: width, height: 80)
             .background(questionManager.answerSelected ? answer.isCorrect ? .green : .red : .blue)
+//            .animation(.default, value: questionManager.previousCorrect)
             .clipShape(Capsule())
             .onTapGesture {
                 questionManager.submitAnswer(answer)

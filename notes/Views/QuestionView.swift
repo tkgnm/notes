@@ -15,24 +15,33 @@ struct QuestionView: View {
     var body: some View {
         NavigationView {
             VStack {
-                GeometryReader { geometry in
-                    HStack {
-                        TimerBar(questionManager: questionManager, initialWidth: geometry.size.width * 0.9)
-                        Spacer()
-                        Text("\(questionManager.ticker)")
+                VStack(spacing: 0) {
+                    GeometryReader { geometry in
+                        HStack {
+                            TimerBar(questionManager: questionManager, initialWidth: geometry.size.width * 0.9)
+                            Spacer()
+                            Text("\(questionManager.ticker)")
+                        }
                     }
+
+                    Spacer()
+
+                    HStack {
+                        Text("Score: \(questionManager.score)/\(questionManager.totalQuestions)")
+                        Spacer()
+                        Text("Accuracy: \(questionManager.displayAccuracy)")
+                    }
+                    .foregroundColor(.primary)
                 }
+                .frame(maxHeight: 80)
                 .padding()
 
-                Text("You score is \(questionManager.score)/\(questionManager.totalQuestions)")
-                    .foregroundColor(.primary)
-                Text("Accuracy: \(questionManager.displayAccuracy)")
+                Spacer()
 
-                ZStack {
-                    VStack {
-                        Stave(noteValue: questionManager.duration, pitches: [questionManager.correctAnswer])
-                    }
-                }
+                Stave(noteValue: questionManager.duration, pitches: [questionManager.correctAnswer], clef: questionManager.settings.clef)
+                    .frame(maxHeight: 600)
+
+                Spacer()
 
                 HStack {
                     GeometryReader { geometry in
@@ -43,14 +52,12 @@ struct QuestionView: View {
                                 AnswerButton(questionManager: questionManager, answer: answer, width: buttonWidth)
                             }
                         }
-                        .frame(width: geometry.size.width, alignment: .center)
+//                        .frame(width: geometry.size.width, alignment: .center)
                     }
+                    .frame(maxHeight: 100)
                 }
                 .padding()
-//                Spacer()
-//                Spacer()
             }
-//            .background(Color.grezen)
         }
         .alert("Game over!", isPresented: $questionManager.gameOver) {
             Button("Okay") {

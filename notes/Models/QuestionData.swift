@@ -23,6 +23,7 @@ struct Module: Decodable, Identifiable {
 
 struct Settings: Decodable {
     var durations: [Duration]
+    var clef: Clef?
     var pitches: [Pitch]
     var answers: [String]
 }
