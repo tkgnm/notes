@@ -10,9 +10,7 @@ import SwiftUI
 struct NoteImage: View {
     
     var value: String
-
-    @State private var isShowing = false
-
+    
     var body: some View {
         Image(value)
             .resizable()
